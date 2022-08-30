@@ -6,10 +6,10 @@
 # Uncompress and extract contents of tar archive
 tar -xzf NthPrime.tgz
 
-cd NthPrime
+cd NthPrime || exit
 
 # Compiles C program
 gcc main.c nth_prime.c -o NthPrime
 
 # Runs C program
-./NthPrime $1
+./NthPrime "$1"
