@@ -12,3 +12,6 @@ cd $TMPDIR/$argname
 
 #Deletes all files containing DELETE ME!
 grep -l 'DELETE ME!' * | xargs rm -f
+
+#Creates a new cleaned archive
+tar czf "$OLDPWD"/cleaned_"$1" -C ./.. $argname
